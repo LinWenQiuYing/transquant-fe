@@ -1,0 +1,63 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-project-detail {
+  margin: 20px;
+  display: flex;
+  height: calc(100% - 40px);
+
+  &-menu {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 0px rgba(31, 48, 78, 0.05),
+      0px 10px 16px 4px rgba(31, 48, 78, 0.04);
+
+    &-title {
+      height: 56px;
+      line-height: 56px;
+      padding: 0 24px;
+      color: var(--grey-500);
+      font-size: 16px;
+      background: #fff;
+      border-bottom: 1px solid var(--grey-200);
+    }
+  }
+
+  &-content {
+    width: calc(100% - 278px);
+    padding-left: 20px;
+    overflow: auto;
+  }
+
+  .@{ant-prefix}-menu {
+    width: 278px;
+    height: calc(100% - 56px);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &-item {
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    &-sub {
+      background-color: #fff !important;
+    }
+  }
+
+  .@{ant-prefix}-table-title {
+    padding: 0 !important;
+
+    .@{prefix}-table-filters {
+      margin-bottom: 20px;
+
+      &-item {
+        width: calc((100% - 32px) / 3);
+
+        &.long-item {
+          min-width: 300px;
+        }
+      }
+    }
+  }
+}

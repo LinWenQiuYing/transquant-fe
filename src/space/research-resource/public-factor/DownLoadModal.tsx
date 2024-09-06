@@ -1,0 +1,105 @@
+import useMount from "ahooks/lib/useMount";
+import { Form, Input, Modal, Select } from "antd";
+import { observer } from "mobx-react";
+import { useEffect, useState } from "react";
+import { useStores } from "../../hooks";
+
+interface DeployModalProps {
+  title?: string;
+  path: string;
+  visible: boolean;
+  onVisibleChange: (value: boolean) => void;
+}
+
+export interface IFormValues {
+  projectName: string;
+  tags: string[];
+  path: string;
+  comment: string;
+}
+
+const defaultFormValues: Partial<IFormValues> = {
+  projectName: "",
+  tags: [],
+  comment: "",
+};
+
+export default observer(function FactorModal(props: DeployModalProps) {
+  const { title = "新建因子项目", path, visible, onVisibleChange } = props;
+  const { download2PersonalSpace, getTags, allTags } =
+    useStores().publicFactorStore;
+
+  const [form] = Form.useForm();
+  const [formValues, setFormValues] =
+    useState<Partial<IFormValues>>(defaultFormValues);
+
+  useMount(() => {
+    getTags();
+  });
+
+  useEffect(() => {
+    form.setFieldsValue(defaultFormValues);
+    setFormValues(defaultFormValues);
+  }, [visible]);
+
+  const onOk = async () => {
+    form.validateFields().then(async (values) => {
+      form.resetFields();
+
+      download2PersonalSpace({ ...values, path });
+      onVisibleChange(false);
+    });
+  };
+  return (
+    <Modal
+      title={title}
+      open={visible}
+      destroyOnClose
+      maskClosable={false}
+      onCancel={() => onVisibleChange(false)}
+      width={600}
+      onOk={onOk}
+    >
+      <Form
+        form={form}
+        layout="vertical"
+        preserve={false}
+        initialValues={formValues}
+      >
+        <Form.Item
+          name="projectName"
+          label="项目名称"
+          rules={[
+            {
+              required: true,
+              message:
+                "名称不能为空且不能为纯数字，且只允许中文、英文、数字、和'_'",
+              pattern: /^(?![0-9]+$)[\u4300-\u9fa5_a-zA-Z0-9]+$/,
+            },
+          ]}
+        >
+          <Input placeholder="请输入项目名称" maxLength={15} />
+        </Form.Item>
+        <Form.Item name="tags" label="标签设置">
+          <Select
+            placeholder="请选择项目标签"
+            mode="tags"
+            tokenSeparators={[","]}
+          >
+            {allTags.map((label: any) => (
+              <Select.Option key={label.name}>{label.name}</Select.Option>
+            ))}
+          </Select>
+        </Form.Item>
+
+        <Form.Item name="comment" label="备注">
+          <Input.TextArea
+            placeholder="请输入备注信息"
+            maxLength={50}
+            showCount
+          />
+        </Form.Item>
+      </Form>
+    </Modal>
+  );
+});

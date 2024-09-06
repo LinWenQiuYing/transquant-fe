@@ -1,0 +1,26 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-strategy-view {
+  height: 100%;
+  padding: 20px;
+
+  &-card {
+    height: calc(100% - 60px);
+
+    .trans-quant-antd-card-body {
+      padding-top: 0;
+    }
+
+    .trans-quant-antd-card-body,
+    .trans-quant-antd-tabs,
+    .trans-quant-antd-tabs-content,
+    .trans-quant-antd-tabs-tabpane {
+      height: 100%;
+    }
+
+    .@{ant-prefix}-tabs-content-holder {
+      height: calc(100% - 46px);
+      overflow: hidden;
+    }
+  }
+}

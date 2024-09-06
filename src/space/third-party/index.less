@@ -1,0 +1,25 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-third-party {
+  height: 100%;
+  overflow: hidden;
+
+  .@{prefix}-content-panel-card {
+    margin: 20px;
+  }
+
+  .@{ant-prefix}-card {
+    height: calc(100% - 56px);
+
+    &-body,
+    .@{ant-prefix}-tabs {
+      height: 100%;
+      padding-top: 0;
+    }
+
+    .@{ant-prefix}-tabs-content-holder {
+      height: calc(100% - 56px);
+      overflow: hidden;
+    }
+  }
+}

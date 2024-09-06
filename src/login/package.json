@@ -1,0 +1,24 @@
+{
+  "name": "@transquant/login",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "description": "登录模块",
+  "dependencies": {
+    "@ant-design/icons": "5.0.1",
+    "@transquant/app": "^1.0.0",
+    "@transquant/common": "^1.0.0",
+    "@transquant/constants": "^1.0.0",
+    "@transquant/ui": "^1.0.0",
+    "@transquant/utils": "^1.0.0",
+    "@types/md5": "^2.3.2",
+    "ahooks": "^3.5.0",
+    "antd": "5.10.0",
+    "js-cookie": "^3.0.5",
+    "md5": "^2.3.0",
+    "mobx": "^4.15.7",
+    "mobx-react": "^6.3.0",
+    "react": "^18.2.0",
+    "react-i18next": "^13.3.0"
+  }
+}

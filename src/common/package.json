@@ -1,0 +1,25 @@
+{
+  "name": "@transquant/common",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "description": "公共业务组件",
+  "dependencies": {
+    "@ant-design/icons": "5.0.1",
+    "@transquant/app": "^1.0.0",
+    "@transquant/constants": "^1.0.0",
+    "@transquant/ui": "^1.0.0",
+    "@transquant/utils": "^1.0.0",
+    "@types/react-syntax-highlighter": "^15.5.11",
+    "ahooks": "^3.7.2",
+    "antd": "5.10.0",
+    "github-markdown-css": "^5.4.0",
+    "react": "^18.2.0",
+    "react-i18next": "^13.3.0",
+    "react-json-view": "^1.21.3",
+    "react-markdown": "9.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.0"
+  }
+}

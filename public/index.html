@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>TransQuant</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="tq-root"></div>
+    <script src="./js/version-polling/version-polling.js"></script>
+    <script>
+      VersionPolling.createVersionPolling({
+        appETagKey: "__TRANSQUANT_ETAG__",
+        pollingInterval: 5 * 60 * 1000,
+        immediate: true,
+        onUpdate: (self) => {
+          // 当检测到有新版本时，执行的回调函数，可以在这里提示用户刷新页面
+          const result = confirm("页面有更新，点击确定刷新页面！");
+          if (result) {
+            self.onRefresh();
+          } else {
+            self.onCancel();
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

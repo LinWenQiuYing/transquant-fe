@@ -1,0 +1,25 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.job-instance-log-modal {
+  .@{ant-prefix}-modal-content {
+    .@{ant-prefix}-modal-body {
+      height: 500px;
+      overflow: auto;
+
+      .@{ant-prefix}-empty {
+        margin: 180px 0;
+      }
+
+      pre {
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+    }
+
+    .@{ant-prefix}-modal-footer {
+      .@{ant-prefix}-btn-default {
+        display: none;
+      }
+    }
+  }
+}

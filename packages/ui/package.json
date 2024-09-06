@@ -1,0 +1,20 @@
+{
+  "name": "@transquant/ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "5.0.1",
+    "@transquant/app": "^1.0.0",
+    "@transquant/constants": "^1.0.0",
+    "@transquant/utils": "^1.0.0",
+    "@types/react-custom-scrollbars": "^4.0.10",
+    "antd": "5.10.0",
+    "classnames": "^2.3.1",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-i18next": "^13.3.0",
+    "vanilla-jsoneditor": "^0.18.9"
+  }
+}

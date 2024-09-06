@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/themes.css" />
+    <link rel="stylesheet" href="css/sidebar-folder-mine.min.css" />
+  </head>
+  <body>
+    <!--  <nav>-->
+    <!--    <a href="#/">TransQuant</a>-->
+    <!--  </nav>-->
+    <div id="app"></div>
+    <script>
+      window.$docsify = {
+        name: "TransQuant 使用手册".bold(),
+        repo: "https://gitee.com/TransQuant/trans-quant-v2.0-user-guide",
+        coverpage: true,
+        loadSidebar: true,
+        auto2top: true,
+        // loadNavbar: true,
+        subMaxLevel: 4,
+        search: {
+          maxAge: 3600000,
+          paths: "auto",
+          placeholder: { "/zh-ch": "搜索", "/": "搜索" },
+          depth: 4,
+          noData: "找不到结果",
+          sidebarDisplayLevel: 3,
+        },
+      };
+    </script>
+    <!-- Docsify v4 -->
+    <script src="js/docsify@4.js"></script>
+    <script src="js/prism-python.min.js"></script>
+    <script src="js/search.min.js"></script>
+    <script src="js/docsify-copy-code.min.js"></script>
+  </body>
+</html>

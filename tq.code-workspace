@@ -1,0 +1,35 @@
+{
+  "folders": [
+    {
+      "path": "./",
+      "name": "monorepo"
+    },
+    {
+      "path": "./packages"
+    },
+    {
+      "path": "./src/administration"
+    },
+    {
+      "path": "./src/analysis"
+    },
+    {
+      "path": "./src/app"
+    },
+    {
+      "path": "./src/common"
+    },
+    {
+      "path": "./src/entry"
+    },
+    {
+      "path": "./src/login"
+    },
+    {
+      "path": "./src/option"
+    },
+    {
+      "path": "./src/person"
+    }
+  ]
+}

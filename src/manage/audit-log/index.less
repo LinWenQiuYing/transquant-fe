@@ -1,0 +1,30 @@
+@import (reference) "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-log {
+  .@{prefix}-content-panel-card {
+    margin: 20px;
+  }
+}
+
+.@{prefix}-audit-log-status {
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+    border-radius: 50%;
+  }
+
+  &.success::before {
+    background-color: var(--green-600);
+  }
+
+  &.error::before {
+    background-color: var(--red-600);
+  }
+
+  &.pending::before {
+    background-color: var(--gold-600);
+  }
+}

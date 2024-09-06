@@ -1,0 +1,48 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-home-team-user,
+.@{prefix}-home-team-factor,
+.@{prefix}-home-team-strategy {
+  .header {
+    margin-bottom: 10px;
+    .title {
+      position: relative;
+      padding: 0px 10px;
+      font-size: 15px;
+      font-weight: bold;
+
+      &::before {
+        content: "";
+        width: 4px;
+        height: 14px;
+        position: absolute;
+        top: 4px;
+        left: 0px;
+        display: inline-block;
+        overflow: hidden;
+        background-color: var(--red-600);
+      }
+    }
+  }
+
+  .chart-content {
+    & > div:first-of-type {
+      position: relative;
+      padding-right: 10px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 200px;
+        display: inline-block;
+        border-right: 1px dashed var(--grey-200);
+        right: 4px;
+        top: 48px;
+      }
+    }
+    & > div:last-of-type {
+      padding-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@import (reference) "@transquant/ui/styles/prefix.less";
+
+//less循环，传入参数为要生成的盒子阴影的个数，随机生成位移范围2000*2000的白色盒子阴影
+.mixin(@n) when(@n>0) {
+  box-shadow+: ~`Math.round(Math.random() * 2000) + "px " +
+    Math.round(Math.random() * 2000) + "px #FFF" `;
+  .mixin((@n - 1));
+}
+
+.@{prefix}-login {
+  &-container {
+    & > div:nth-child(1) {
+      width: 540px;
+      height: 600px;
+      background: url("../../../public/images/login.png") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &-stars {
+    & > div {
+      opacity: 0.3;
+    }
+
+    & > div:nth-child(1) {
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      .mixin(60);
+
+      animation: animStar 50s linear infinite;
+    }
+
+    & > div:nth-child(1)::after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 1px;
+      height: 1px;
+      background: transparent;
+      .mixin(60);
+    }
+
+    & > div:nth-child(2) {
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      .mixin(100);
+    }
+
+    & > div:nth-child(2)::after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      .mixin(100);
+    }
+
+    & > div:nth-child(3) {
+      width: 3px;
+      height: 3px;
+      background: transparent;
+      .mixin(500);
+
+      animation: animStar 150s linear infinite;
+    }
+
+    & > div:nth-child(3)::after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 3px;
+      height: 3px;
+      background: transparent;
+      .mixin(500);
+    }
+
+    @keyframes animStar {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(-2000px);
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@transquant/constants",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "5.0.1",
+    "@transquant/app": "^1.0.0",
+    "antd": "5.10.0",
+    "react-i18next": "^13.3.0"
+  }
+}

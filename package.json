@@ -1,0 +1,43 @@
+{
+  "name": "transquant",
+  "private": true,
+  "scripts": {
+    "postinstall": "is-ci || husky install",
+    "clean": "lerna clean",
+    "bootstrap": "lerna bootstrap",
+    "docz:dev": "lerna run --parallel docz:dev",
+    "start": "lerna run --parallel start",
+    "build": "GENERATE_SOURCEMAP=true lerna run --parallel build",
+    "build:development": "GENERATE_SOURCEMAP=true lerna run --parallel build",
+    "build:production": "GENERATE_SOURCEMAP=false lerna run --parallel build",
+    "analyzer": "lerna run --parallel analyzer",
+    "lint": "tq-scripts lint",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.1.4",
+    "@commitlint/config-conventional": "12.1.4",
+    "cross-env": "^7.0.3",
+    "cz-customizable": "6.3.0",
+    "husky": "7.0.1",
+    "lerna": "5.1.4"
+  },
+  "workspaces": [
+    "packages/*",
+    "src/*"
+  ],
+  "dependencies": {
+    "loadjs": "^4.3.0-rc1"
+  }
+}

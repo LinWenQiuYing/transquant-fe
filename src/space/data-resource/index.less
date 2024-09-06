@@ -1,0 +1,126 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-data{
+  height: 100%;
+}
+
+.@{prefix}-data-resource {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  overflow: hidden;
+
+
+
+  &-left {
+    width: 320px;
+    margin-right: 20px;
+    overflow: hidden;
+
+    &-spin-wrapper {
+      display: flex;
+      margin: 50% auto;
+      justify-content: center;
+    }
+
+    .@{ant-prefix}-card-body {
+      height: calc(100% - 65px);
+
+      .@{ant-prefix}-tree {
+        height: 100%;
+        overflow: auto;
+      }
+    }
+
+    .@{prefix}-tree-node {
+      max-width: 150px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .@{ant-prefix}-card-extra {
+      .anticon {
+        padding: 3px;
+        color: var(--red-600);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-content {
+    flex: 1;
+    overflow: auto;
+
+    &-snapshot {
+      .@{ant-prefix}-row {
+        line-height: 32px;
+      }
+    }
+  }
+
+  &-import-table {
+    .editable-cell {
+      position: relative;
+    }
+
+    .editable-cell-value-wrap {
+      padding: 5px 12px;
+      cursor: pointer;
+    }
+    .trans-quant-antd-table-cell {
+      vertical-align: middle;
+    }
+
+    .editable-row .editable-cell-value-wrap {
+      padding: 4px 11px;
+      border: 1px solid #d9d9d9;
+      border-radius: 2px;
+    }
+  }
+
+  &-database,
+  &-create-table,
+  &-example,
+  &-import-table {
+    & > div:first-of-type {
+      position: relative;
+      padding: 0px 10px;
+      margin-bottom: 20px;
+      font-weight: bold;
+
+      &::before {
+        content: "";
+        width: 4px;
+        height: 14px;
+        position: absolute;
+        top: 4px;
+        left: 0px;
+        display: inline-block;
+        overflow: hidden;
+        background-color: var(--red-600);
+      }
+    }
+  }
+}
+
+.@{prefix}-snapshot-comment {
+  width: 100%;
+
+  .trans-quant-antd-space-item:last-of-type {
+    flex: 1;
+  }
+}
+
+.ant-upload-drag-icon {
+  margin-bottom: 24px;
+
+  .anticon {
+    font-size: 48px;
+    color: var(--red-600)
+  }
+}
+
+.ant-upload-text {
+  font-weight: bold;
+}

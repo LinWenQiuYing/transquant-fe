@@ -1,0 +1,53 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-project-view {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+
+  &-item {
+    width: calc((100% - 20px) / 2);
+
+    &:nth-child(2) {
+      margin-left: 20px;
+    }
+
+    .@{ant-prefix}-picker {
+      width: 240px;
+    }
+
+    .@{ant-prefix}-card-body {
+      display: flex;
+      height: calc(100% - 56px);
+
+      .@{prefix}-project-view-item-pie {
+        width: calc((100% - 20px) / 2);
+        height: 100% !important;
+        position: relative;
+      }
+
+      .@{prefix}-project-view-item-table {
+        width: calc((100% - 20px) / 2);
+        height: 100%;
+        margin-left: 20px;
+      }
+    }
+
+    &.pie-chart {
+      flex: 1;
+      height: calc(100% - 343px);
+    }
+
+    &.bar-chart {
+      width: 100%;
+      height: 323px;
+      margin-top: 20px;
+
+      .@{prefix}-project-view-item-bar {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

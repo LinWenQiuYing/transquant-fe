@@ -1,0 +1,48 @@
+{
+  "name": "@transquant/entry",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "description": "项目入口模块",
+  "scripts": {
+    "start": "cross-env NODE_OPTIONS=--max_old_space_size=8192 & tq-scripts start",
+    "build": "cross-env NODE_OPTIONS=--max_old_space_size=8192 & tq-scripts build",
+    "analyzer": "tq-scripts build --analyzer"
+  },
+  "dependencies": {
+    "@ant-design/icons": "5.0.1",
+    "@transquant/app": "^1.0.0",
+    "@transquant/docs": "^1.0.0",
+    "@transquant/login": "^1.0.0",
+    "@transquant/manage": "^1.0.0",
+    "@transquant/person": "^1.0.0",
+    "@transquant/space": "^1.0.0",
+    "@transquant/ui": "^1.0.0",
+    "@transquant/utils": "^1.0.0",
+    "@transqunat/data-engineering": "^1.0.0",
+    "antd": "5.10.0",
+    "i18next": "^23.5.1",
+    "i18next-browser-languagedetector": "^7.1.0",
+    "mobx": "^4.15.7",
+    "mobx-react": "^6.3.0",
+    "qiankun": "^2.10.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.3.0",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^6.3.0",
+    "version-polling": "^1.1.7"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

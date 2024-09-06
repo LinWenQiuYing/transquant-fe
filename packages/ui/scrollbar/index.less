@@ -1,0 +1,18 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-scrollbar {
+  &.active > div:nth-last-child(1),
+  &.active > div:nth-last-child(2) {
+    background-color: transparent;
+    opacity: 1 !important;
+
+    &:hover,
+    &:focus {
+      background-color: #eee;
+    }
+    & > div {
+      background-color: #ccc !important;
+      opacity: 0.6 !important;
+    }
+  }
+}

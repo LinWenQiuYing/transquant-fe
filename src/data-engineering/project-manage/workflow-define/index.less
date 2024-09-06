@@ -1,0 +1,107 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.workflow-define-operator-menu-dropdown {
+  .@{ant-prefix}-dropdown-menu {
+    text-align: center;
+    padding: 0;
+    width: 88px;
+
+    &-item:hover {
+      background: #ffe6e5;
+      color: #e31430;
+      cursor: pointer;
+    }
+  }
+}
+
+.@{prefix}-start-modal {
+  .@{ant-prefix}-modal-body {
+    padding: 20px 0 0;
+
+    .no-item-execute {
+      display: none;
+    }
+
+    .@{ant-prefix}-checkbox-wrapper{
+      width: 160px;
+    }
+
+    .@{ant-prefix}-picker {
+      width: 100%;
+    }
+  }
+}
+
+.@{prefix}-time-modal {
+  height: 720px;
+
+  .@{ant-prefix}-modal-body {
+    padding: 20px 0 0px;
+
+    .@{ant-prefix}-form-item-control-input-content {
+      display: flex;
+      flex-wrap: wrap;
+
+      p {
+        width: 100%;
+      }
+
+      .@{ant-prefix}-btn {
+        margin-left: 8px;
+      }
+
+      .crontab-item {
+        margin-bottom: 0;
+        width: calc(100% - 96px);
+      }
+    }
+
+    .trans-quant-antd-tabs-content-holder {
+      max-height: 280px;
+      overflow-y: scroll;
+    }
+  }
+}
+
+.@{prefix}-time-radio {
+  .radio-item,.interval-time,.specific-time,.cycle-time {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .interval-time,.cycle-time{
+    .time-input {
+      width: 120px;
+      margin: 0 8px;
+    }
+  }
+
+  .specific-time {
+    .time-select {
+      width: 256px;
+    }
+  }
+
+
+}
+
+.@{prefix}-day-radio {
+
+  .radio-content,.radio-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  .radio-item{
+    .item-input,.item-select {
+      width: 120px;
+      margin: 0 8px;
+    }
+    .week-select{
+      width: 256px;
+      margin: 0 8px;
+    }
+    
+  }
+}

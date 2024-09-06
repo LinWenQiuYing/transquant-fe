@@ -1,0 +1,80 @@
+/* 文本超出长度显示省略号 */
+.@{prefix}-ellipsis {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.@{prefix}-status {
+  position: relative;
+  padding-left: 16px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    margin-right: 6px;
+    border-radius: 50%;
+  }
+
+  &::after {
+    width: 10px;
+    height: 10px;
+    top: 4px;
+  }
+
+  &::before {
+    width: 6px;
+    height: 6px;
+    top: 6px;
+    left: 2px;
+    z-index: 1;
+  }
+
+  &.success::after {
+    background-color: var(--green-200);
+  }
+
+  &.success::before {
+    background-color: var(--green-600);
+  }
+
+  &.error::after {
+    background-color: var(--red-400);
+  }
+
+  &.error::before {
+    background-color: var(--red-600);
+  }
+
+  &.pending::after {
+    background-color: var(--grey-200);
+  }
+
+  &.pending::before {
+    background-color: var(--grey-400);
+  }
+
+  &.running::after {
+    background-color: var(--blue-200);
+  }
+
+  &.running::before {
+    background-color: var(--blue-400);
+  }
+}
+
+.@{prefix}-required {
+  &::before {
+    display: inline-block;
+    margin-inline-end: 4px;
+    color: #ff4d4f;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: "*";
+  }
+}

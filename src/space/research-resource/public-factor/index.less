@@ -1,0 +1,56 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-research {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  overflow: hidden;
+
+  &-left {
+    width: 320px;
+    margin-right: 20px;
+    overflow: auto;
+
+    .@{ant-prefix}-tree-node-content-wrapper {
+      white-space: nowrap;
+    }
+
+    &-more {
+      width: calc(100% - 24px);
+      display: inline-flex;
+      justify-content: space-between;
+
+      .anticon {
+        rotate: 90deg;
+        font-size: 20px;
+        display: none;
+      }
+
+      &:hover {
+        .anticon {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &-content {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+
+    .trans-quant-antd-card-body {
+      height: calc(100% - 56px);
+      overflow: auto;
+    }
+
+    &-copyBtn {
+      position: absolute;
+      font-size: 20px;
+      top: 50px;
+      right: 20px;
+      z-index: 1;
+    }
+  }
+}

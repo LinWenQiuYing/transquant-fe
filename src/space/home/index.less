@@ -1,0 +1,31 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-home-tab {
+  & > .@{ant-prefix}-card {
+    &-body,
+    .@{ant-prefix}-tabs {
+      padding-top: 0;
+      flex: 1;
+    }
+
+    .@{ant-prefix}-tabs-content-holder {
+      height: calc(100% - 56px);
+      overflow: hidden;
+    }
+  }
+}
+
+.@{prefix}-home-calendar {
+  .trans-quant-antd-picker-calendar,
+  .trans-quant-antd-picker-panel {
+    background-color: transparent;
+  }
+
+  .trans-quant-antd-picker-cell-inner {
+    border-radius: 50% !important;
+
+    &::before {
+      border-radius: 50% !important;
+    }
+  }
+}

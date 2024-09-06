@@ -1,0 +1,39 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-statistic-personal {
+  margin-top: 20px;
+  border-radius: 6px;
+
+  .@{ant-prefix}-card-body {
+    padding: 10px;
+
+    p {
+      font-weight: bold;
+    }
+  }
+}
+
+.@{prefix}-home-personal-factor,
+.@{prefix}-home-personal-strategy {
+  .header {
+    margin-bottom: 10px;
+    .title {
+      position: relative;
+      padding: 0px 10px;
+      font-size: 15px;
+      font-weight: bold;
+
+      &::before {
+        content: "";
+        width: 4px;
+        height: 14px;
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        display: inline-block;
+        overflow: hidden;
+        background-color: var(--red-600);
+      }
+    }
+  }
+}

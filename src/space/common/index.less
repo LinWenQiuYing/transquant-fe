@@ -1,0 +1,49 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-code-file {
+  display: flex;
+  width: 100%;
+  min-height: 200px;
+
+  & > div:nth-of-type(1) {
+    width: 300px;
+  }
+
+  & > div:nth-of-type(2) {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &-tree {
+    min-width: 280px;
+    width: 280px;
+    height: calc(100vh - 360px);
+    overflow: auto;
+    margin-right: 20px;
+    border-radius: 3px;
+    padding: 10px;
+    border: 1px solid var(--grey-200);
+  }
+
+  &-content {
+    flex: 1;
+    height: calc(100vh - 360px);
+    overflow: auto;
+    position: relative;
+    &-copyBtn {
+      position: absolute;
+      font-size: 20px;
+      top: 0px;
+      right: -10px;
+      z-index: 1;
+    }
+  }
+}
+
+.@{prefix}-incre-tracking-view-log {
+  height: 600px;
+  background-color: var(--grey-100);
+  border: 1px solid var(--grey-200);
+  border-radius: 6px;
+  overflow: auto;
+}

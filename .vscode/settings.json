@@ -1,0 +1,71 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "files.exclude": {
+    "**/node_modules": true,
+    "build": true,
+    // "public": true,
+    "__snapshots__": true,
+    ".git": true,
+    ".DS_Store": true,
+    "tsconfig.json": true,
+    "tsconfig.lib.json": true,
+    "commitlint.config.js": true,
+    ".eslintcache": true,
+    ".eslintrc.js": true,
+    ".cz-config.js": true,
+    ".gitignore": false,
+    "reportWebVitals.ts": true,
+    "setupTests.ts": true,
+    ".prettierrc": false,
+    "yarn-error.log": true,
+    "lerna-debug.log": true,
+    "*.gitattributes": true,
+    "build.zip": true,
+    "tq.code-workspace": true,
+    "yarn.lock": false,
+    "README.md": true,
+    "lerna.json": false,
+    "**/package.json": false,
+    "**/.husky": true
+  },
+  "search.exclude": {
+    "node_modules": true,
+    "build": true
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
+  "typescript.tsc.autoDetect": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "json.schemaDownload.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "prettier.singleQuote": false,
+  "prettier.jsxSingleQuote": false,
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript][typescriptreact]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
+  }
+}

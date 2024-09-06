@@ -1,0 +1,20 @@
+{
+  "name": "@transquant/utils",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@ant-design/icons": "5.0.1",
+    "@transquant/app": "^1.0.0",
+    "@types/crypto-js": "^4.1.1",
+    "@types/loadjs": "^4.0.1",
+    "ahooks": "^2.10.9",
+    "antd": "5.10.0",
+    "axios": "^1.4.0",
+    "crypto-js": "^4.1.1",
+    "js-cookie": "^3.0.5",
+    "loadjs": "^4.3.0-rc1",
+    "querystring-es3": "^0.2.1",
+    "react": "^18.2.0",
+    "react-i18next": "^13.3.0"
+  }
+}

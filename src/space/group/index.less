@@ -1,0 +1,75 @@
+@import "@transquant/ui/styles/prefix.less";
+
+.@{prefix}-table-filters {
+  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc((100% - 48px) / 4 - 40px);
+
+    &.long-item {
+      width: calc((100% - 48px) / 4 + 120px);
+    }
+
+    &.long-label-item {
+      .item-label {
+        width: 90px;
+      }
+
+      .item-input {
+        width: calc(100% - 90px) !important;
+      }
+    }
+
+    .item-label {
+      width: 75px;
+      text-align: right;
+    }
+
+    .item-input {
+      width: calc(100% - 75px) !important;
+    }
+
+    .show-text {
+      width: 50px;
+      display: flex;
+      cursor: pointer;
+      color: var(--red-600);
+
+      .anticon {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.@{prefix}-group-detail-modal {
+  .trans-quant-antd-form {
+    &-item {
+      &.right-item {
+        .trans-quant-antd-row {
+          flex-direction: row;
+          align-items: center;
+
+          .trans-quant-antd-form-item-label {
+            padding: 0;
+          }
+
+          .trans-quant-antd-form-item-control {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    .member-table {
+      margin-bottom: 20px;
+    }
+  }
+}
